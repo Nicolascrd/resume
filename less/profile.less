@@ -1,0 +1,90 @@
+@bleu: #2e74ff;
+@bleu-fonce: darken(@bleu, 20%);
+@orange: #ff852e;
+@orange-mono: #e69357;
+
+#profile{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    h1{
+        font-size: 3em;
+        color: @bleu-fonce;
+    }
+    h3{
+        font-size:1.3em;
+    }
+    h4{
+        font-size: 1.5em;
+        color: @bleu-fonce;
+    }
+}
+
+#presentation{
+    display: flex;
+    padding-top: 10px;
+}
+
+#about{
+    text-align: right;
+}
+#details{
+    text-align: left;
+}
+
+@border-size: 15px;
+@presentation-column-width: 270px;
+
+.presentation-column{
+    width: @presentation-column-width;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+
+#portrait{
+    width:calc(@presentation-column-width - 2 * @border-size);
+    border-radius: 50%;
+    border: 15px @orange-mono solid;
+}
+
+.details-list{
+    list-style: none;
+    padding: 0;
+    li{
+        line-height: 150%;
+        padding-top:10px;
+    }
+}
+//mobile view puts the 3 columns in row instead
+
+@media(max-width: 900px){
+    @presentation-column-width: 400px;
+    .presentation-column{
+        max-width: @presentation-column-width;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 14px;
+        display: block;
+    }
+
+    #presentation{
+        display: flex;
+        flex-direction:column;
+        padding-top: 10px;
+    }
+
+    #about{
+        text-align: center;
+    }
+    #details{
+        text-align: center;
+    }
+    #picture{
+        padding-top: 10px;
+    }
+    
+}
+

@@ -1,10 +1,17 @@
 var app = new Vue({
-    el: '#opening',
+    el: '#app',
     data() { 
         return {
             name: 'Nicolas Couraud',
             cities: ["barcelone", "toulouse", "lille", "nancy", "paris", "sainte", "saigon"],
-            num: 0 // starts with cities [num]
+            num: 0, // starts with cities [num]
+            job: 'Front-end Web Developer',
+            age: 20,
+            location: 'France',
+            linkedin: "https://linkedin.com/in/nicolas-couraud",
+            github: "https://github.com/nicolascrd",
+            pictureOfMe:"/images/MOI.jpg",
+            about:"I am a passionate Web Developer. I enjoy building responsive web pages and applications with beautiful and efficient design.<br><br> Even if I don't have tons of experience, you can trust me to deliver professional-level work.  I am precise and reliable. And also, I'm still learning."
         }
     },
     beforeDestroy(){
@@ -19,7 +26,7 @@ var app = new Vue({
         // every 10 seconds
         this.interval = setInterval(() => {
             this.next();
-        }, 8000)
+        }, 800000)
     },
     computed:{
         citiesLength: function(){
